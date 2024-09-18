@@ -225,6 +225,21 @@ footer ul li {
     margin-left: 2rem;
 }
 
+.btn-primary {
+    background: #4CAF50;
+    color: #fff;
+    border: 2px solid #4CAF50;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary:hover {
+    background: #45a049;
+    border-color: #45a049;
+}
+
+
 @media (max-width: 768px) {
     .container {
         width: 90%;
