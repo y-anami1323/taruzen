@@ -1,0 +1,286 @@
+body {
+    font-family: 'Noto Serif JP', serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+#hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+h1, h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about img {
+    width: 50%;
+    max-width: 500px;
+    margin-right: 2rem;
+}
+
+.menu-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.menu-preview .menu-description {
+    width: 45%;
+    text-align: left;
+}
+
+.menu-preview img {
+    width: 45%;
+    max-width: 400px;
+}
+
+.menu-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.phone {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.call-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.access-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.access-info iframe {
+    margin-right: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+#full-menu {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.menu-highlights {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.menu-highlight-item {
+    width: 30%;
+    text-align: center;
+}
+
+.menu-highlight-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.menu-highlight-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+.menu-details {
+    text-align: left;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.menu-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-table td:first-child {
+    font-weight: bold;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #4CAF50;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 50%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 2.5rem 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .burger.active .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.active .line2 {
+        opacity: 0;
+    }
+
+    .burger.active .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    #about, .menu-preview {
+        flex-direction: column;
+    }
+
+    #about img, .menu-preview img {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .menu-preview .menu-description {
+        width: 100%;
+    }
+
+    .access-info {
+        flex-direction: column;
+    }
+
+    .access-info iframe {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .menu-highlights {
+        flex-direction: column;
+    }
+
+    .menu-highlight-item {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
